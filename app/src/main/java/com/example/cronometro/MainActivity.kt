@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             PausarCronometro()
         }
         binding.zerar.setOnClickListener{
-
+            ZerarCronometro()
         }
     }
     private fun IniciarCronometro(){
@@ -36,6 +36,12 @@ class MainActivity : AppCompatActivity() {
             binding.cronometro.stop()
             pause = SystemClock.elapsedRealtime() - binding.cronometro.base
             running = false
+        }
+    }
+    private fun ZerarCronometro(){
+        if(running){
+            binding.cronometro.base = SystemClock.elapsedRealtime()
+            pause = 0
         }
     }
 }
