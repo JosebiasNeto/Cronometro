@@ -14,8 +14,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        
         binding.iniciar.setOnClickListener{
             IniciarCronometro()
     }
